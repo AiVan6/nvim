@@ -13,5 +13,4 @@ map("n", "<leader>q", ":q<CR>", opts)
 --map("n", "<Leader>fo", ":lua vim.lsp.buf.format()<CR>", opts)
 map("n", "<leader>cm", ":Mason<CR>", opts)
 map("n", "<leader>cl", ":Lazy<CR>", opts)
-
-
+map("n", "<leader>f", ":!gofumpt -w %<CR>", opts)
