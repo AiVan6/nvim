@@ -56,4 +56,13 @@ return {
 		},
 		lazy = false, -- neo-tree will lazily load itself
 	},
+
+	{
+		"nvim-telescope/telescope.nvim",
+		version = "*",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+		},
+	},
 }
