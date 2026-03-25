@@ -5,6 +5,7 @@ return {
 			"ray-x/guihua.lua",
 			"neovim/nvim-lspconfig",
 			"nvim-treesitter/nvim-treesitter",
+			"windwp/nvim-autopairs",
 		},
 		opts = function()
 			require("go").setup(opts)
