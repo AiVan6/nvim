@@ -74,4 +74,14 @@ return {
 			"ibhagwan/fzf-lua", -- optional
 		},
 	},
+	{
+		"petertriho/nvim-scrollbar",
+		dependencies = {
+			"kevinhwang91/nvim-hlslens", -- для подсветки поиска
+		},
+		config = function()
+			require("scrollbar").setup()
+			require("scrollbar.handlers.search").setup()
+		end,
+	},
 }
