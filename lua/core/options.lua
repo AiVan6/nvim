@@ -11,3 +11,5 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.softtabstop = 4
 
 vim.g.mapleader = " "
+
+vim.opt.laststatus = 3
