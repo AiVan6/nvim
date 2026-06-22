@@ -1,34 +1,18 @@
-return {
+vim.pack.add({
+    "https://github.com/projekt0n/github-nvim-theme",
+})
 
-	{
-		"projekt0n/github-nvim-theme",
-		lazy = false,
-		config = function()
-			vim.cmd("colorscheme github_dark_tritanopia")
-		end,
-	},
-	{
-		"nvim-lualine/lualine.nvim",
-		lazy = false,
-		config = function()
-			require("lualine").setup({})
-		end,
-	},
+require("github-theme").setup()
 
-	{
-		"lewis6991/gitsigns.nvim",
-		lazy = true,
-		event = "BufRead",
-		config = function()
-			require("gitsigns").setup()
-		end,
-	},
+vim.cmd.colorscheme("github_dark_colorblind")
 
-	{
-		"rcarriga/nvim-notify",
-		lazy = false,
-		config = function()
-			require("notify")
-		end,
-	},
-}
+vim.pack.add({
+    "https://github.com/nvim-lualine/lualine.nvim",
+    "https://github.com/lewis6991/gitsigns.nvim",
+    "https://github.com/rcarriga/nvim-notify"
+
+})
+
+require("lualine").setup({})
+require("gitsigns").setup()
+vim.notify = require("notify")
