@@ -5,6 +5,7 @@ require("mason-lspconfig").setup({
   ensure_installed = {
     "intelephense",
     "ts_ls",
+    "jdtls"
   },
 })
 
@@ -30,3 +31,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 -- scrollbar
 require("scrollbar").setup()
 require("scrollbar.handlers.search").setup()
+--lspconfig
+require("lspconfig")
+
