@@ -12,10 +12,10 @@ vim.pack.add({
 
 -- LSP
 vim.pack.add({
-      "https://github.com/williamboman/mason.nvim",
-  "https://github.com/williamboman/mason-lspconfig.nvim",
+    "https://github.com/williamboman/mason.nvim",
+    "https://github.com/williamboman/mason-lspconfig.nvim",
     "https://github.com/neovim/nvim-lspconfig"
-  })
+})
 
 -- Formatting
 

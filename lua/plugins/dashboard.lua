@@ -1,7 +1,10 @@
-return {
-	"nvimdev/dashboard-nvim",
-	event = "VimEnter",
-	config = function()
+vim.pack.add({
+	"https://github.com/nvimdev/dashboard-nvim",
+	"https://github.com/nvim-tree/nvim-web-devicons",
+})
+
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
 		require("dashboard").setup({
 			theme = "doom",
 			config = {
@@ -16,6 +19,7 @@ return {
 					"                                         ",
 					"                                         ",
 				},
+
 				center = {
 					{
 						icon = "📄 ",
@@ -27,6 +31,7 @@ return {
 						key_hl = "Number",
 						action = "enew",
 					},
+
 					{
 						icon = "🌴 ",
 						icon_hl = "Title",
@@ -37,6 +42,7 @@ return {
 						key_hl = "Number",
 						action = ":Yazi",
 					},
+
 					{
 						icon = "📁 ",
 						icon_hl = "Title",
@@ -49,16 +55,6 @@ return {
 					},
 
 					{
-						icon = "👨‍🎨 ",
-						icon_hl = "Title",
-						desc = "Lazy Plugin Manager",
-						desc_hl = "String",
-						key = "l",
-						keymap = "SPC l",
-						key_hl = "Number",
-						action = "Lazy",
-					},
-					{
 						icon = "🚪 ",
 						icon_hl = "Title",
 						desc = "Quit               ",
@@ -69,6 +65,7 @@ return {
 						action = "qa",
 					},
 				},
+
 				footer = {
 					"",
 					"🔥 Happy Coding with Hooli Setup! 🔥",
@@ -76,5 +73,85 @@ return {
 			},
 		})
 	end,
-	dependencies = { { "nvim-tree/nvim-web-devicons" } },
-}
+})
+
+--return {
+--	"nvimdev/dashboard-nvim",
+--	event = "VimEnter",
+--	config = function()
+--		require("dashboard").setup({
+--			theme = "doom",
+--			config = {
+--				header = {
+--					"                                         ",
+--					"  ██╗  ██╗ ██████╗  ██████╗ ██╗     ██╗  ",
+--					"  ██║  ██║██╔═══██╗██╔═══██╗██║     ██║  ",
+--					"  ███████║██║   ██║██║   ██║██║     ██║  ",
+--					"  ██╔══██║██║   ██║██║   ██║██║     ██║  ",
+--					"  ██║  ██║╚██████╔╝╚██████╔╝███████╗██║  ",
+--					"  ╚═╝  ╚═╝ ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ",
+--					"                                         ",
+--					"                                         ",
+--				},
+--				center = {
+--					{
+--						icon = "📄 ",
+--						icon_hl = "Title",
+--						desc = "New File           ",
+--						desc_hl = "String",
+--						key = "n",
+--						keymap = "n",
+--						key_hl = "Number",
+--						action = "enew",
+--					},
+--					{
+--						icon = "🌴 ",
+--						icon_hl = "Title",
+--						desc = "Open File Tree     ",
+--						desc_hl = "String",
+--						key = "e",
+--						keymap = "e",
+--						key_hl = "Number",
+--						action = ":Yazi",
+--					},
+--					{
+--						icon = "📁 ",
+--						icon_hl = "Title",
+--						desc = "Open File          ",
+--						desc_hl = "String",
+--						key = "o",
+--						keymap = "o",
+--						key_hl = "Number",
+--						action = "edit .",
+--					},
+--
+--					{
+--						icon = "👨‍🎨 ",
+--						icon_hl = "Title",
+--						desc = "Lazy Plugin Manager",
+--						desc_hl = "String",
+--						key = "l",
+--						keymap = "SPC l",
+--						key_hl = "Number",
+--						action = "Lazy",
+--					},
+--					{
+--						icon = "🚪 ",
+--						icon_hl = "Title",
+--						desc = "Quit               ",
+--						desc_hl = "String",
+--						key = "q",
+--						keymap = "SPC q",
+--						key_hl = "Number",
+--						action = "qa",
+--					},
+--				},
+--				footer = {
+--					"",
+--					"🔥 Happy Coding with Hooli Setup! 🔥",
+--				},
+--			},
+--		})
+--	end,
+--	dependencies = { { "nvim-tree/nvim-web-devicons" } },
+--}
